@@ -1,6 +1,8 @@
 django-social-auth-widget
 ============================
 
+.. image:: http://adw0rd.com/media/uploads/smappi_auth.png
+
 Add to settings::
 
     SOCIAL_AUTH_PROVIDERS = [
