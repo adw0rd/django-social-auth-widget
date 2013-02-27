@@ -15,7 +15,13 @@ Add to settings::
 How to use::
 
     {% load social_auth_widget %}
-    {% social_auth_widget %}
+
+    <form action="" method="post">
+        <input name="username" />
+        <input name="password" />
+        <input type="submit" value="Sign in" />
+        {% social_auth_widget %}
+    </form>
 
 See also:
 
