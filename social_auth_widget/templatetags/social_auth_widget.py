@@ -8,4 +8,4 @@ def social_auth_widget(context):
     }
 
 register = template.Library()
-register.inclusion_tag('auth/social_auth_widget.html', takes_context=True)(social_auth_widget)
+register.inclusion_tag('social_auth_widget.html', takes_context=True)(social_auth_widget)
