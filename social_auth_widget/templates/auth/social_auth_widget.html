@@ -1,0 +1,23 @@
+{% load i18n static %}
+{% spaceless %}
+    {% for provider in providers %}
+        <a href="{% url socialauth_begin provider.id %}" class="social-auth-backend"
+           style="background-position: {{ provider.position.width }}px {{ provider.position.height }}px">
+            <img title="{% trans provider.name %}" alt="{% trans provider.name %}" src="{% static "/static/blank.png" %}">
+        </a>
+    {% endfor %}
+    <div style="clear:both"></div>
+    <style type="text/css">
+        .social-auth-backend {
+            margin: 0px 10px 0px 0px;
+            background-image: url('{% static "/static/social_auth.png" %}');
+            background-repeat: no-repeat;
+            display: block;
+            float: left;
+        }
+        .social-auth-backend > img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+{% endspaceless %}
