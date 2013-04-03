@@ -1,7 +1,7 @@
 {% load i18n static %}
 {% spaceless %}
     {% for provider in providers %}
-        <a href="{% url socialauth_begin provider.id %}" class="social-auth-backend"
+        <a href="{% url 'socialauth_begin' provider.id %}" class="social-auth-backend"
            style="background-position: {{ provider.position.width }}px {{ provider.position.height }}px">
             <img title="{% trans provider.name %}" alt="{% trans provider.name %}" src="{% static "/static/blank.png" %}">
         </a>
